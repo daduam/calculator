@@ -11,7 +11,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Home(title: 'Calculator'),
+      home: const HomeScreen(title: 'Calculator'),
     );
   }
 }
