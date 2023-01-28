@@ -1,4 +1,7 @@
+import 'package:calculator/pages/home/features/grid_display_feature/button_display.dart';
 import 'package:flutter/material.dart';
+
+import 'button.dart';
 
 class GridDisplay extends StatelessWidget {
   const GridDisplay({super.key});
@@ -6,11 +9,41 @@ class GridDisplay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-        flex: 3,
+        flex: 4,
         child: Container(
           margin: const EdgeInsets.only(left: 10, right: 10),
           color: Colors.green,
-          child: const Text("Column2"),
+          child: GridView.count(
+            crossAxisCount: 4,
+            crossAxisSpacing: 6.0,
+            mainAxisSpacing: 8.0,
+            padding:
+                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
+            children: List.generate(buttons.length,
+                (index) => ButtonDisplay(button: buttons[index])),
+          ),
         ));
   }
 }
+
+List<Button> buttons = [
+  Button(value: "AC", function: "neutral"),
+  Button(value: "+/-", function: "neutral"),
+  Button(value: "%", function: "neutral"),
+  Button(value: "/", function: "operator"),
+  Button(value: "7", function: "number"),
+  Button(value: "8", function: "number"),
+  Button(value: "9", function: "number"),
+  Button(value: "x", function: "operator"),
+  Button(value: "4", function: "number"),
+  Button(value: "5", function: "number"),
+  Button(value: "6", function: "number"),
+  Button(value: "-", function: "operator"),
+  Button(value: "1", function: "number"),
+  Button(value: "2", function: "number"),
+  Button(value: "3", function: "number"),
+  Button(value: "+", function: "operator"),
+  Button(value: "0", function: "number"),
+  Button(value: ",", function: "number"),
+  Button(value: "=", function: "operator"),
+];
