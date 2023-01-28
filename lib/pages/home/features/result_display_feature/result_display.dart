@@ -8,8 +8,15 @@ class ResultDisplay extends StatelessWidget {
     return Expanded(
         child: Container(
       margin: const EdgeInsets.all(10),
-      color: Colors.red,
-      child: const Text("Column1"),
+      child: Container(
+          alignment: Alignment.bottomRight,
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          child: const Text(
+            "0",
+            textAlign: TextAlign.end,
+            style: TextStyle(
+                color: Colors.white, fontFamily: "Rubik", fontSize: 100.0),
+          )),
     ));
   }
 }

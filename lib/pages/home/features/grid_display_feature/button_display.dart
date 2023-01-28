@@ -40,7 +40,7 @@ class ButtonDisplay extends StatelessWidget {
                 color: textColor(button.function),
                 fontSize: 40.0,
                 fontFamily: "Rubik",
-                fontWeight: FontWeight.w400)),
+                fontWeight: FontWeight.w700)),
       ),
     );
   }
