@@ -1,47 +1,31 @@
+import 'package:calculator/pages/home/features/grid_display_feature/grid_display.dart';
+import 'package:calculator/pages/home/features/result_display_feature/result_display.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+/*
+  The home screen of app.
+  This is where all other components are called and built.
+*/
+class HomePage extends StatelessWidget {
   const HomePage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(title),
       ),
-      body: Center(
+      body: Container(
+        color: Colors.black,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: const [
+            ResultDisplay(),
+            GridDisplay(),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
