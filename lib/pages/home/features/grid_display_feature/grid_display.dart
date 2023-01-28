@@ -12,11 +12,10 @@ class GridDisplay extends StatelessWidget {
         flex: 4,
         child: Container(
           margin: const EdgeInsets.only(left: 10, right: 10),
-          color: Colors.green,
           child: GridView.count(
             crossAxisCount: 4,
-            crossAxisSpacing: 6.0,
-            mainAxisSpacing: 8.0,
+            crossAxisSpacing: 10.0,
+            mainAxisSpacing: 12.0,
             padding:
                 const EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
             children: List.generate(buttons.length,
