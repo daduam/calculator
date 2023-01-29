@@ -7,7 +7,7 @@ class ResultDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-      margin: const EdgeInsets.all(10),
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       child: Container(
           alignment: Alignment.bottomRight,
           padding: const EdgeInsets.symmetric(horizontal: 15.0),

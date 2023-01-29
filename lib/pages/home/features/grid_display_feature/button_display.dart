@@ -25,6 +25,13 @@ class ButtonDisplay extends StatelessWidget {
     return color;
   }
 
+  double setWidth(String value) {
+    double width;
+    value == "0" ? width = 100.0 : width = 50.0;
+
+    return width;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,7 +40,7 @@ class ButtonDisplay extends StatelessWidget {
         color: buttonColor(button.function),
       ),
       height: 50.0,
-      width: 50.0,
+      width: setWidth(button.value),
       child: Center(
         child: Text(button.value,
             style: TextStyle(
