@@ -22,8 +22,8 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: const [
-            ResultDisplay(),
-            GridDisplay(),
+            ResultDisplay(), // Calls the section that displays the answer after calculation
+            GridDisplay(), // Calls the section that displays the number buttons
           ],
         ),
       ),

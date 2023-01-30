@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'button.dart';
 
+// does the arrangemnet of the buttons into rows and column grid
 class GridDisplay extends StatelessWidget {
   const GridDisplay({super.key});
 
@@ -25,6 +26,7 @@ class GridDisplay extends StatelessWidget {
   }
 }
 
+// the list of buttons to be displayed in the grid
 List<Button> buttons = [
   Button(value: "AC", function: "neutral"),
   Button(value: "+/-", function: "neutral"),
