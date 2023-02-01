@@ -31,6 +31,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  spannable_grid: ^0.3.0
 
 
   # The following adds the Cupertino Icons font to your application.

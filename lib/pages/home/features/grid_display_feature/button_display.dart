@@ -29,12 +29,6 @@ class ButtonDisplay extends StatelessWidget {
   }
 
   // responsible for displaying the appropriate width on the button
-  double setWidth(String value) {
-    double width;
-    value == "0" ? width = 100.0 : width = 50.0;
-
-    return width;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,8 +37,9 @@ class ButtonDisplay extends StatelessWidget {
         borderRadius: BorderRadius.circular(100),
         color: buttonColor(button.function),
       ),
-      height: 50.0,
-      width: setWidth(button.value),
+      width: 10.0,
+      height: 10.0,
+      margin: const EdgeInsets.symmetric(vertical: 10.0),
       child: Center(
         child: Text(button.value,
             style: TextStyle(

@@ -1,6 +1,6 @@
 import 'package:calculator/pages/home/features/grid_display_feature/grid_display.dart';
-import 'package:calculator/pages/home/features/result_display_feature/result_display.dart';
 import 'package:flutter/material.dart';
+import 'package:spannable_grid/spannable_grid.dart';
 
 /*
   The home screen of app.
@@ -15,15 +15,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.black,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: const [
-            ResultDisplay(), // Calls the section that displays the answer after calculation
-            GridDisplay(), // Calls the section that displays the number buttons
-          ],
-        ),
-      ),
+          color: Colors.black,
+          child: Expanded(
+              child: SpannableGrid(
+            cells: cells,
+            columns: 4,
+            rows: 7,
+            editingStrategy: SpannableGridEditingStrategy.disabled(),
+          ))),
     );
   }
 }
