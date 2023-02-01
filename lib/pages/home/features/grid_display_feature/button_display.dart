@@ -37,9 +37,9 @@ class ButtonDisplay extends StatelessWidget {
         borderRadius: BorderRadius.circular(100),
         color: buttonColor(button.function),
       ),
-      width: 10.0,
-      height: 10.0,
-      margin: const EdgeInsets.symmetric(vertical: 10.0),
+      width: 50.0,
+      height: 50.0,
+      margin: const EdgeInsets.symmetric(vertical: 6.0),
       child: Center(
         child: Text(button.value,
             style: TextStyle(
