@@ -1,5 +1,6 @@
 import 'package:calculator/pages/home/features/grid_display_feature/button_display.dart';
 import 'package:calculator/pages/home/features/result_display_feature/result_display.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:spannable_grid/spannable_grid.dart';
 
@@ -32,7 +33,7 @@ List<SpannableGridCellData> cells = [
       child: Container(
         margin: const EdgeInsets.only(left: 10, right: 10),
         child: ButtonDisplay(
-          button: Button(value: "+/-", function: "neutral"),
+          button: Button(value: "±", function: "neutral"),
         ),
       )),
   SpannableGridCellData(
@@ -50,7 +51,7 @@ List<SpannableGridCellData> cells = [
       child: Container(
         margin: const EdgeInsets.only(left: 10, right: 10),
         child: ButtonDisplay(
-          button: Button(value: "/", function: "operator"),
+          button: Button(value: "÷", function: "operator"),
         ),
       )),
   SpannableGridCellData(
