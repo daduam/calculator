@@ -1,5 +1,6 @@
 import 'package:calculator/pages/home/features/grid_display_feature/button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 // creates the looks and feel of the buttons
 class ButtonDisplay extends StatelessWidget {
@@ -32,21 +33,17 @@ class ButtonDisplay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(100),
-        color: buttonColor(button.function),
-      ),
-      width: 50.0,
-      height: 50.0,
-      margin: const EdgeInsets.symmetric(vertical: 6.0),
+    return ElevatedButton(
+      onPressed: () {},
+      style: ElevatedButton.styleFrom(
+          backgroundColor: buttonColor(button.function),
+          shape: const CircleBorder()),
       child: Center(
-        child: Text(button.value,
-            style: TextStyle(
-                color: textColor(button.function),
-                fontSize: 40.0,
-                fontFamily: "Rubik",
-                fontWeight: FontWeight.w700)),
+        child: Text(
+          button.value,
+          style: const TextStyle(
+              fontSize: 30.0, fontFamily: "Rubik", fontWeight: FontWeight.w700),
+        ),
       ),
     );
   }
