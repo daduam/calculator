@@ -16,13 +16,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
           color: Colors.black,
-          child: Expanded(
-              child: SpannableGrid(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: SpannableGrid(
             cells: cells,
             columns: 4,
             rows: 7,
             editingStrategy: SpannableGridEditingStrategy.disabled(),
-          ))),
+          )),
     );
   }
 }
