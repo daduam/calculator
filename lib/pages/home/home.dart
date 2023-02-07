@@ -1,11 +1,5 @@
-import 'package:calculator/pages/home/features/grid_display_feature/grid_display.dart';
 import 'package:flutter/material.dart';
-import 'package:spannable_grid/spannable_grid.dart';
 
-/*
-  The home screen of app.
-  This is where all other components are called and built.
-*/
 class HomePage extends StatelessWidget {
   const HomePage({super.key, required this.title});
 
@@ -14,16 +8,130 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-          color: Colors.black,
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          child: SpannableGrid(
-            cells: cells,
-            columns: 4,
-            rows: 7,
-            editingStrategy: SpannableGridEditingStrategy.disabled(),
-          )),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(
+            flex: 3,
+            child: Container(
+              decoration: BoxDecoration(color: Colors.red),
+            ),
+          ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.red)),
+                ),
+                Expanded(
+                  child: Container(
+                      decoration: BoxDecoration(color: Colors.yellow)),
+                ),
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.blue)),
+                ),
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.green)),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Expanded(
+                  child: Container(
+                      decoration: BoxDecoration(color: Colors.yellow)),
+                ),
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.blue)),
+                ),
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.green)),
+                ),
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.red)),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.blue)),
+                ),
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.green)),
+                ),
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.red)),
+                ),
+                Expanded(
+                  child: Container(
+                      decoration: BoxDecoration(color: Colors.yellow)),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.green)),
+                ),
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.red)),
+                ),
+                Expanded(
+                  child: Container(
+                      decoration: BoxDecoration(color: Colors.yellow)),
+                ),
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.blue)),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                      decoration: BoxDecoration(color: Colors.yellow)),
+                ),
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.blue)),
+                ),
+                Expanded(
+                  child:
+                      Container(decoration: BoxDecoration(color: Colors.green)),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
