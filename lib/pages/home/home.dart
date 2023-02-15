@@ -8,14 +8,27 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            flex: 3,
+            flex: 2,
+            child: Container(),
+          ),
+          Expanded(
             child: Container(
-              decoration: BoxDecoration(color: Colors.red),
+              margin: EdgeInsets.all(8.0),
+              alignment: Alignment.bottomRight,
+              child: Text(
+                "0",
+                maxLines: 1,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 80,
+                  fontWeight: FontWeight.w300,
+                ),
+              ),
             ),
           ),
           Expanded(
