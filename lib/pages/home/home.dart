@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../models/button_type.dart';
+import '../../widgets/calculator_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key, required this.title});
@@ -36,26 +37,10 @@ class HomePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Expanded(
-                  child: Container(
-                      decoration:
-                          BoxDecoration(color: ButtonType.ac.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: ButtonType.plusminus.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: ButtonType.percent.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: ButtonType.divide.backgroundColor)),
-                ),
+                Expanded(child: CalculatorButton(ButtonType.ac)),
+                Expanded(child: CalculatorButton(ButtonType.plusminus)),
+                Expanded(child: CalculatorButton(ButtonType.percent)),
+                Expanded(child: CalculatorButton(ButtonType.divide)),
               ],
             ),
           ),
@@ -63,26 +48,10 @@ class HomePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: ButtonType.seven.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: ButtonType.eight.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: ButtonType.nine.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: ButtonType.multiply.backgroundColor)),
-                ),
+                Expanded(child: CalculatorButton(ButtonType.seven)),
+                Expanded(child: CalculatorButton(ButtonType.eight)),
+                Expanded(child: CalculatorButton(ButtonType.nine)),
+                Expanded(child: CalculatorButton(ButtonType.multiply)),
               ],
             ),
           ),
@@ -90,26 +59,10 @@ class HomePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: ButtonType.four.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: ButtonType.five.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration:
-                          BoxDecoration(color: ButtonType.six.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: ButtonType.subtract.backgroundColor)),
-                ),
+                Expanded(child: CalculatorButton(ButtonType.four)),
+                Expanded(child: CalculatorButton(ButtonType.five)),
+                Expanded(child: CalculatorButton(ButtonType.six)),
+                Expanded(child: CalculatorButton(ButtonType.subtract)),
               ],
             ),
           ),
@@ -117,26 +70,10 @@ class HomePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Expanded(
-                  child: Container(
-                      decoration:
-                          BoxDecoration(color: ButtonType.one.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration:
-                          BoxDecoration(color: ButtonType.two.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: ButtonType.three.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration:
-                          BoxDecoration(color: ButtonType.add.backgroundColor)),
-                ),
+                Expanded(child: CalculatorButton(ButtonType.one)),
+                Expanded(child: CalculatorButton(ButtonType.two)),
+                Expanded(child: CalculatorButton(ButtonType.three)),
+                Expanded(child: CalculatorButton(ButtonType.add)),
               ],
             ),
           ),
@@ -144,22 +81,9 @@ class HomePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Expanded(
-                  flex: 2,
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color: ButtonType.zero.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration:
-                          BoxDecoration(color: ButtonType.dot.backgroundColor)),
-                ),
-                Expanded(
-                  child: Container(
-                      decoration:
-                          BoxDecoration(color: ButtonType.eq.backgroundColor)),
-                ),
+                Expanded(child: CalculatorButton(ButtonType.zero)),
+                Expanded(child: CalculatorButton(ButtonType.dot)),
+                Expanded(child: CalculatorButton(ButtonType.eq)),
               ],
             ),
           ),
