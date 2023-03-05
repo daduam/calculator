@@ -3,8 +3,9 @@ import '../models/button_type.dart';
 
 class CalculatorButton extends StatelessWidget {
   final ButtonType buttonType;
+  final bool isWide;
 
-  CalculatorButton(this.buttonType);
+  CalculatorButton(this.buttonType, this.isWide);
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +13,9 @@ class CalculatorButton extends StatelessWidget {
       style: TextButton.styleFrom(
         foregroundColor: buttonType.foregroundColor,
         backgroundColor: buttonType.backgroundColor,
-        minimumSize: const Size(80, 80),
-        shape: CircleBorder(),
+        shape: isWide ? StadiumBorder() : CircleBorder(),
+        alignment: isWide ? Alignment.centerLeft : Alignment.center,
+        padding: isWide ? EdgeInsets.only(left: 32.0) : EdgeInsets.all(8.0),
         textStyle: const TextStyle(
           fontSize: 32,
           fontWeight: FontWeight.w500,
